@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tri Terrain</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="theme-color" content="#14171a">
+<style>
+  html,body{margin:0;height:100%;background:#14171a;color:#eef1f4;font:17px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  main{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:16px;box-sizing:border-box;text-align:center}
+  img{width:120px;height:120px;border-radius:28px}
+  h1{margin:0;font-size:24px}
+  h1 span{color:#f2b33d}
+  a{display:inline-block;background:#f2b33d;color:#1b1404;font-weight:650;text-decoration:none;border-radius:12px;padding:12px 20px}
+  p{color:#97a1ad;margin:0;font-size:14px;max-width:320px}
+</style>
+</head>
+<body>
+<main>
+  <img src="icon-512.png" alt="">
+  <h1>Tri <span>Terrain</span></h1>
+  <a id="go" href="https://claude.ai/artifact/GDtM4Th73Wm3fqnQStH8fR">Ouvrir Tri Terrain</a>
+  <p>Si la page ne s'ouvre pas toute seule, touche le bouton.</p>
+</main>
+<script>
+  // Ouvre Tri Terrain (sur claude.ai, connecté à ton compte) dès le lancement de l'icône
+  setTimeout(() => location.href = document.getElementById('go').href, 400);
+</script>
+</body>
+</html>
