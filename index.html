@@ -23,11 +23,14 @@
   <img src="icon-512.png" alt="">
   <h1>Tri <span>Terrain</span></h1>
   <a id="go" href="https://claude.ai/artifact/GDtM4Th73Wm3fqnQStH8fR">Ouvrir Tri Terrain</a>
-  <p>Si la page ne s'ouvre pas toute seule, touche le bouton.</p>
+  <p id="how">Pour mettre l'icône sur ton téléphone : dans Chrome, touche le menu ⋮ en haut à droite, puis « Ajouter à l'écran d'accueil ».</p>
 </main>
 <script>
-  // Ouvre Tri Terrain (sur claude.ai, connecté à ton compte) dès le lancement de l'icône
-  setTimeout(() => location.href = document.getElementById('go').href, 400);
+  // Ouvre Tri Terrain tout seul seulement quand on part de l'icône de l'écran d'accueil
+  if (matchMedia('(display-mode: standalone)').matches || navigator.standalone) {
+    document.getElementById('how').textContent = 'Ouverture de Tri Terrain…';
+    setTimeout(() => location.href = document.getElementById('go').href, 300);
+  }
 </script>
 </body>
 </html>
